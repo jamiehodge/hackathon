@@ -1,7 +1,8 @@
 import React from "react"
-import Router, { Route } from "react-router"
+import Router, { DefaultRoute, Route } from "react-router"
 
 import App from "./components/App"
+import Index from "./components/Index"
 import Item from "./components/Item"
 import Flux from "./Flux"
 
@@ -9,6 +10,7 @@ const flux = new Flux()
 
 const routes = (
   <Route handler={App} path="/">
+    <DefaultRoute handler={Index}/>
     <Route name="event" path="/:id" handler={Item}/>
   </Route>
 )
