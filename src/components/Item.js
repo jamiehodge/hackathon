@@ -1,6 +1,11 @@
-import React, { Component } from "react"
+import React, { Component, PropTypes } from "react"
 
 class Item extends Component {
+  static propTypes = {
+    events: PropTypes.object,
+    params: PropTypes.object
+  }
+
   render() {
     const id = parseInt(this.props.params.id, 10)
     const event = this.props.events.get(id)
