@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { RouteHandler } from "react-router"
+import { Link, RouteHandler } from "react-router"
 
 import List from "./List"
 
@@ -15,7 +15,10 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <h1>React.js Meetups</h1>
+        <Link to="/">
+          <h1>React.js Meetups</h1>
+        </Link>
+
         <div className="master">
           <List {...this.props}/>
         </div>
