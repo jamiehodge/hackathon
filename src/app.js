@@ -22,6 +22,11 @@ const router = Router.create({
 
 flux.actions.events.list()
 
-router.run((Handler) => {
+router.run((Handler, state) => {
+  state
+    .routes
+    .filter((route) => route.handler.fetchData)
+    .forEach((route) => route.handler.fetchData(flux))
+
   React.render(<Handler {...flux}/>, document.body)
 })
