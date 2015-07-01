@@ -15,6 +15,7 @@ class App extends Component {
   render() {
     return (
       <div className="app">
+        <h1>React.js Meetups</h1>
         <div className="master">
           <List {...this.props}/>
         </div>
